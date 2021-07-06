@@ -11,7 +11,7 @@ export default function Banner(props) {
       <div className="max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
         <div className="pr-16 sm:text-center sm:px-16">
           <p className="font-medium text-white">
-          {previewMode === "published" ?
+          {previewMode === "live" ?
             <>
                 <span className="md:hidden">To check the draft mode click here</span>
                 <span className="hidden md:inline">To check the draft mode click here</span>

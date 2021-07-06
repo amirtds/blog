@@ -24,10 +24,11 @@ export default BlogPage;
 export const getStaticProps = async (context) => {
     // Blogs Data
     // GQL queries
+    const previewMode = context.preview == false || context.preview == null ? "live" : "preview"
     const slug = context.params.slug
     const BLOG_QUERY = gql`
-    query($slug: String){
-      blogs(where: {slug: $slug}){
+    query($slug: String, $previewMode: String){
+      blogs(where: {slug: $slug, _publicationState: $previewMode}){
         id
         title
         subtitle
@@ -49,10 +50,13 @@ export const getStaticProps = async (context) => {
     `
     const { data:blogData } = await apolloClient.query({
       query: BLOG_QUERY,
-      variables: {slug},
+      variables: {
+        slug,
+        previewMode
+        
+      },
       preview: context.preview,
     })
-    const previewMode = context.preview == false || context.preview == null ? "published" : "draft"
     return {
       props: {
         post: blogData.blogs[0],
