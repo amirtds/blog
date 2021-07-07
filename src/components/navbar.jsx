@@ -18,7 +18,7 @@ export default function Navbar() {
                   <Link href="/">
                     <a>
                       <img
-                        className="block h-12 w-auto"
+                        className="block h-12 w-24"
                         src="/logo.svg"
                         alt="Workflow"
                       />
