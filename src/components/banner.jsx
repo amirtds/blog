@@ -1,6 +1,4 @@
-import { XIcon } from '@heroicons/react/outline'
 import { useRouter } from 'next/router'
-import Cookies from 'universal-cookie';
 
 export default function Banner(props) {
     const router = useRouter()
@@ -38,15 +36,6 @@ export default function Banner(props) {
                 
                 }
           </p>
-        </div>
-        <div className="absolute inset-y-0 right-0 pt-1 pr-1 flex items-start sm:pt-1 sm:pr-2 sm:items-start">
-          <button
-            type="button"
-            className="flex p-2 rounded-md hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-white"
-          >
-            <span className="sr-only">Dismiss</span>
-            <XIcon className="h-6 w-6 text-white" aria-hidden="true" />
-          </button>
         </div>
       </div>
     </div>

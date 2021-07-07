@@ -1,7 +1,6 @@
-import urlBuilder from 'lib/imageUrl'
 
 export default function Blog(props) {
-    const {title, description, subtitle, content, image} = props.post
+    const {title, description, content} = props.post
     return (
       <div className="relative py-16 bg-white overflow-hidden">
         <div className="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
