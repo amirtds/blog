@@ -26,13 +26,13 @@ module.exports = {
       'xl': '1280px',
     },
     colors: {
-      rose: colors.rose,
       transparent: 'transparent',
       current: 'currentColor',
       black: colors.black,
       white: colors.white,
       gray: colors.coolGray,
-      blue: colors.blue
+      indigo: colors.indigo,
+
     },
     extend: {},
   },
